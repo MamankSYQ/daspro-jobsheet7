@@ -4,21 +4,21 @@ public class SiakadFor01 {
         Scanner sc = new Scanner(System.in);
         
         double nilai;
-        double tertinggi = 0;
-        double terendah = 100;
+        int lulus = 0;
+        int tidakLulus = 0;
 
         for (int i = 1; i <=10;i++){
             System.out.print("Masukkan nilai Mahasiswa ke-" + i + " : ");
             nilai = sc.nextDouble();
 
-            if (nilai > tertinggi){
-                tertinggi = nilai;
+            if (nilai >= 60){
+                lulus++;
             }
-            if (nilai < terendah){
-                terendah = nilai;
+            else if (nilai < 60){
+                tidakLulus++;
             }
         }
-        System.out.println("Nilai tertinggi : " + tertinggi);
-        System.out.println("Nilai terendah : " + terendah);
+        System.out.println("Jumlah Mahasiswa yang lulus : " + lulus);
+        System.out.println("Jumlah Mahasiswa yang tidak lulus : " + tidakLulus);
     }
 }
